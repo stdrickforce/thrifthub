@@ -13,8 +13,16 @@ setup(
     license="MIT",
     author="stdrickforce",
     packages=find_packages(),
-    install_requires=[],
+    install_requires=[
+        "thriftpy",
+        "requests",
+    ],
     long_description=long_description,
+    entry_points={
+        "console_scripts": {
+            "thub = thub.cmd:main",
+        }
+    },
     classifiers=[
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
